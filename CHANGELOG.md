@@ -16,6 +16,10 @@ All notable changes to this project are documented here. The format is based on 
 
 - **Every hand-written count of evaluated methods says 149 (#195).** No gate layer checks these counts, so they were updated by hand in `AGENTS.md`, `README.md`, `docs/architecture.md` (three places), `site/README.md`, the *Build with the library* page and the registry's header comment. The generated surfaces (`llms.txt`, `llms-full.txt`, `evaluated.json`, `framework-catalog.md` and `why-not.md`) were regenerated. Historical entries keep their counts.
 
+### Fixed
+
+- **The 14 unvetted wave-4 rows are marked preliminary wherever they are published.** Each row's reasoning said "Preliminary; pending deep-research vetting", but the generated views never print the reasoning. So the *What we leave out* page listed the nine new folds as settled, and `evaluated.json`, `llms-full.txt` and `framework-catalog.md` showed all 14 rows without the caveat. A new registry field, `preliminary: true`, now carries the status, and each view prints it. The gate's schema check requires the field and the reasoning sentence to agree, and rejects the field on a shipped entry. `evaluated.json` gains a boolean `preliminary` on every method.
+
 ## [0.18.6] - 2026-10-19
 
 **The last two deferred "confirm before a public claim" notes are resolved, and the premortem's confidence effect is graded M (#189-#191).** The issue-tree dossier drops an unsourced claim that decomposition reduces omission errors, and adds a fault-tree finding that points the other way. The pyramid-principle dossier reports its comprehension evidence as a mixed record. The premortem lowered confidence in a deliberately flawed plan in one study, so that effect is graded M, not S-leaning, in all six places that stated it. The confirm-note baseline drops from 2 to 0. The committed wave-4 brief now carries the sentence that was sent (#192), and the backlog records that the wave-4 research ran (#193). No new skills and no governing-tier changes; the catalog stays 56 core + 7 contested.
